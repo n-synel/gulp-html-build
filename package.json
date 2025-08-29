@@ -1,0 +1,30 @@
+{
+  "name": "gulp-html-build",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp dev",
+    "del": "gulp clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n-synel/gulp-html-build.git"
+  },
+  "author": "n-synel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/n-synel/gulp-html-build/issues"
+  },
+  "homepage": "https://github.com/n-synel/gulp-html-build#readme",
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "dotenv": "^17.2.1",
+    "gulp": "^5.0.1",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-if": "^3.0.0",
+    "gulp-sass": "^6.0.1",
+    "gulp-sourcemaps": "^3.0.0",
+    "sass": "^1.91.0"
+  }
+}
