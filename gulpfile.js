@@ -4,6 +4,7 @@ const gulpIf = require('gulp-if');
 const sass = require('gulp-sass')(require('sass'));
 const prefix = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
+const csso = require('gulp-csso');
 const dotenv = require('dotenv');
 const bSync = require('browser-sync');
 
@@ -30,6 +31,9 @@ function scss() {
         .pipe(gulpIf(!isProd, sourcemaps.init()))
         .pipe(gulpIf(isProd, prefix()))
         .pipe(sass({ style: 'compressed' }).on('error', sass.logError))
+        .pipe(gulpIf(isProd, csso({
+            forceMediaMerge: true
+        })))
         .pipe(gulpIf(!isProd, sourcemaps.write()))
         .pipe(gulp.dest('./dist/assets/css/'))
         .pipe(bSync.stream());
