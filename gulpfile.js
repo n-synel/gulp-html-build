@@ -37,7 +37,7 @@ function scss() {
 
 // Images
 function images() {
-    return gulp.src('./src/img/**/*.{jpg,png,svg}')
+    return gulp.src('./src/img/**/*.{jpg,png,svg}', { encoding: false })
         .pipe(gulp.dest('./dist/assets/img/'));
 }
 
